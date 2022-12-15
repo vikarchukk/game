@@ -1,0 +1,105 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    color: white;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    line-height: 48px;
+    min-height: 48px;
+}
+
+#area {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+:root {--border: 2px solid firebrick;}
+#area .cell:nth-child(2) {border-right: var(--border);border-left: var(--border);}
+#area .cell:nth-child(4) {border-bottom: var(--border);border-top: var(--border);}
+#area .cell:nth-child(5) {border: var(--border);}
+#area .cell:nth-child(6) {border-bottom: var(--border);border-top: var(--border);}
+#area .cell:nth-child(8) {border-right: var(--border);border-left: var(--border);}
+
+
+.cell:hover {background-color: rgb(112, 20, 20)}
+
+.currentPlayer {
+    font-size: 25px;
+}
+
+#res {
+    height: 30px;
+}
+
+#stat {
+    text-align: center;
+}
+
+#stat h1 {
+    margin-bottom: 25px;
+}
+
+.st_1, .st_2 {
+    margin-bottom: 10px;
+} 
+
+.link-home {
+    position: relative;
+    top: -20px;
+}
+
+.link-home a {
+    color: firebrick;
+    font-size: 30px;
+}
+
+.link-home a:active {
+    position: relative;
+    top: 5px;
+}
+
+.link-home a:hover::after {
+    content: ">";
+    position: absolute;
+    left: -29px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    color: #fff
+}
